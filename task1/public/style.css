@@ -1,0 +1,161 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('/images/background.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Box */
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 32px;
+}
+
+/* Login form */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-box input:focus {
+    border-color: #007BFF;
+}
+
+.input-box label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #007BFF;
+}
+
+.icon {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+input[type="email"], input[type="password"] {
+    padding-left: 40px; /* Space for icon */
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Response message */
+.response-message {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.response-message h1 {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.details p {
+    font-size: 16px;
+    color: #333;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .login-box, .response-message {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+}

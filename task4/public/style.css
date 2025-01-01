@@ -1,0 +1,150 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('/images/background.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+/* Wrapper styles */
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    animation: slideIn 1s ease;
+}
+
+/* Header styles */
+.header h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Input box styles */
+.input-box {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-box input:focus {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Password strength & error messages */
+.text-danger {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #ffb3b3;
+}
+
+/* Remember me and forgot password */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.remember-forgot a {
+    color: #ffdfdf;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.remember-forgot a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px 15px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Forgot password section */
+#forgot-password-section {
+    display: none;
+    margin-top: 20px;
+}
+
+#forgot-password-section input {
+    width: calc(100% - 50px);
+    margin-right: 10px;
+}
+
+#forgot-password-section button {
+    width: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #007bff;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#forgot-password-section button:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

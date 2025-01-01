@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognifyz Portal</title>
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        // Inline JavaScript for client-side validation
+        function validateForm() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const name = document.getElementById("name").value;
+            let errorMessage = '';
+
+            if (!email || !password || !confirmPassword || !name) {
+                errorMessage = 'All fields are required.';
+            } else if (password !== confirmPassword) {
+                errorMessage = 'Passwords do not match.';
+            }
+
+            if (errorMessage) {
+                document.getElementById("error-message").innerText = errorMessage;
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Cognifyz Intern Portal</h1>
+        </div>
+
+        <div class="login-box">
+            <form action="/submit" method="POST" onsubmit="return validateForm()">
+                <h2>Login</h2>
+
+                <!-- Display error message if any -->
+                <div id="error-message" class="error-message"></div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" id="email" name="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" id="password" name="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <label>Confirm Password</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" id="name" name="name" required>
+                    <label>Name</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit">Login</button>
+
+                <div class="register-link">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
